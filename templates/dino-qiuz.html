@@ -1,0 +1,64 @@
+{% extends "base. html" %}
+{% block title %}Dino-Site!{% endblock %}
+{% block content %}
+<h1>Dinosaur Quiz!</h1>
+<!-- If ne don't ad an action, the action default is to the current page (itself)-->
+<form action="{{urL, for ('dino quiz')}}" method=-"POST" name="dino_quiz">
+(!-- QI: Dropdown - ->
+    <legend>Dinosaur fossils have been found on all seven continents. On which continent have the m
+dinosaur fossils been found?</legend>
+    <select id="continents" name="continents">
+        <option>Africa</option>
+        <option>Antactica</option>
+        <option>Asia</option>
+        <option>Australia</option>
+        <option>Europe</option>
+        <option>North America</option>
+        <option>South America</option> 
+    </select>
+<fieldset>
+    <legend>All dinosaurs hatched from eggs. True or False?</legend>
+    <ul>
+        <li>
+            <label for="true">True</label>
+            <input type="radio" id="true" name="eggs" value="true">
+        </li>
+        <li>
+            <label for="false">False</label>
+            <input type="radio" id="true" name="eggs" value="false">
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>Which of these dinosaurs are herbivores?</legend>
+    <ul>
+        <li>
+            <label for="stegosaurus">Stegosaurus</label>
+            <input type="checkbox" id="stegosaurus" name="herbivores" value="Stegosaurus">
+        </li>
+        <li>
+            <label for="allosaurus">Allosaurus</label>
+            <input type="checkbox" id="allosaurus" name="herbivores" value="allosaurus">
+        </li>
+        <li>
+            <label for="triceratops">Triceratops</label>
+            <input type="checkbox" id="triceratops" name="herbivores" value="triceratops">
+        </li>
+        <li>
+            <label for="velociraptor">Velociraptor</label>
+            <input type="checkbox" id="velociraptor" name="herbivores" value="velociraptor"> 
+        </li>
+    </ul>
+</fieldset>
+
+    <div>
+        <legend>Dinosaurs went extinct:</legend>
+        <input type="text" id="extinct" name="extinct">
+        <label for="extinct">millions of years ago</label>
+    </div>
+
+    <button type="submit" value="Submit">Submit</button>
+    <button type="reset" value="Reset">Reset</button>
+</form>
+
+{% endblock %}
